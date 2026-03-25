@@ -14,6 +14,7 @@ When cloning this kit for a new project, update the following:
 6. **Theming** — Update `--background` and `--foreground` CSS variables in `globals.css`
 7. **Metadata** — Add favicon, og-image, and other assets to `public/`
 8. **Environment** — Create `.env.local` from `.env.example` if needed
+9. **`.gitkeep` files** — Remove from any folder once it has actual content
 
 ## Commands
 

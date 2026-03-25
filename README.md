@@ -54,3 +54,7 @@ public/
 ## Theming
 
 Colors and fonts are configured via CSS variables in `src/app/globals.css` using Tailwind 4's `@theme inline` directive.
+
+## Setting Up a New Project
+
+See `CLAUDE.md` for a step-by-step checklist of what to update when starting a new project from this kit.
