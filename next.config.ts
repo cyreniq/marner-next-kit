@@ -4,6 +4,11 @@ const isDev = process.env.NODE_ENV === "development";
 
 const nextConfig: NextConfig = {
   poweredByHeader: false,
+  experimental: {
+    sri: {
+      algorithm: "sha256",
+    },
+  },
   headers: async () => [
     {
       source: "/:path*",
