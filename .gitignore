@@ -16,5 +16,4 @@ next-env.d.ts
 
 # Misc
 .claude/
-.vscode/
 .DS_Store
