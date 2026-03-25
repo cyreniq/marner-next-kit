@@ -51,6 +51,10 @@ public/
 
 `@/*` maps to `src/*` — use `@/components/...` for imports.
 
+## Security
+
+Pre-configured with hardened HTTP security headers (`next.config.ts`), a strict Content Security Policy, `robots.txt`, and a `security.txt` disclosure contact. Indexing is blocked by default (remove before launch).
+
 ## Theming
 
 Colors and fonts are configured via CSS variables in `src/app/globals.css` using Tailwind 4's `@theme inline` directive.

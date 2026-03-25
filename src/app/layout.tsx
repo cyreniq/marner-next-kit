@@ -9,6 +9,14 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "marner-next-kit",
+  robots: {
+    index: false,
+    follow: false,
+    googleBot: {
+      index: false,
+      follow: false,
+    },
+  },
 };
 
 export default function RootLayout({

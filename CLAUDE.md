@@ -29,6 +29,13 @@ Minimal Next.js starter kit for building landing pages. This is a template repo 
 - **Custom font files** — `src/fonts/`
 - **ESLint** — Flat config in `eslint.config.mjs` using `eslint-config-next/core-web-vitals` and `eslint-config-next/typescript`
 
+## Security
+
+- **No indexing** — Crawling/indexing blocked via `robots.txt`, `robots` metadata in `layout.tsx`, and `X-Robots-Tag` header in `next.config.ts` (remove before launch)
+- **Security headers** — Comprehensive HTTP security headers in `next.config.ts`: HSTS, CSP, COOP, CORP, COEP, X-Content-Type-Options, X-Frame-Options, X-DNS-Prefetch-Control, X-Permitted-Cross-Domain-Policies, Referrer-Policy, Permissions-Policy
+- **`poweredByHeader: false`** — Next.js framework identification disabled
+- **`security.txt`** — Vulnerability reporting contact at `public/.well-known/security.txt`
+
 ## Project Setup Checklist
 
 When cloning this kit for a new project, update the following:
@@ -40,5 +47,6 @@ When cloning this kit for a new project, update the following:
 5. **Font** — To swap Inter: update the import and variable in `layout.tsx`, then update `font-family` references in `globals.css`
 6. **Theming** — Update `--background` and `--foreground` CSS variables in `globals.css`
 7. **Metadata** — Add favicon, og-image, and other assets to `public/`
-8. **Environment** — Create `.env.local` from `.env.example` if needed
-9. **`.gitkeep` files** — Remove from any folder once it has actual content
+8. **Security** — Update `security.txt` contact and expiry; adjust CSP in `next.config.ts` if needed; remove `X-Robots-Tag` header, `robots.txt` disallow, and `robots` metadata when ready to launch
+9. **Environment** — Create `.env.local` from `.env.example` if needed
+10. **`.gitkeep` files** — Remove from any folder once it has actual content
