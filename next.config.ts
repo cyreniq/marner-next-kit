@@ -56,7 +56,7 @@ const nextConfig: NextConfig = {
         {
           key: "Permissions-Policy",
           value:
-            "camera=(), microphone=(), geolocation=(), accelerometer=(), gyroscope=(), magnetometer=(), midi=(), usb=(), battery=(), autoplay=(), display-capture=(), payment=(), screen-wake-lock=(), xr-spatial-tracking=(), interest-cohort=()",
+            "camera=(), microphone=(), geolocation=(), accelerometer=(), gyroscope=(), magnetometer=(), midi=(), usb=(), battery=(), autoplay=(), display-capture=(), payment=(), screen-wake-lock=(), xr-spatial-tracking=()",
         },
       ],
     },
