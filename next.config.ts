@@ -3,7 +3,7 @@ import type { NextConfig } from "next";
 const isDev = process.env.NODE_ENV === "development";
 
 const nextConfig: NextConfig = {
-  allowedDevOrigins: ["0.0.0.0"],
+  allowedDevOrigins: process.env.DEV_ORIGIN ? [process.env.DEV_ORIGIN] : [],
   poweredByHeader: false,
   headers: async () => [
     {
