@@ -1,4 +1,9 @@
+# Next.js
 .next
 out
+
+# Test
 coverage
+
+# Lockfile
 package-lock.json
