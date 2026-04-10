@@ -8,6 +8,7 @@ A minimal Next.js starter kit for building landing pages.
 - **React 19**
 - **TypeScript 5** — Strict mode
 - **Tailwind CSS 4** — Via PostCSS plugin, inline `@theme` configuration
+- **Geist** — Sans and Mono, self-hosted via `next/font/local`
 - **ESLint** — Next.js Core Web Vitals + TypeScript rules (flat config)
 - **Prettier** — With Tailwind CSS class sorting
 

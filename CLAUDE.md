@@ -27,7 +27,7 @@ Minimal Next.js starter kit for building landing pages. This is a template repo 
 - **App Router** — Pages and layouts in `src/app/`
 - **Path alias** — `@/*` maps to `src/*`
 - **Tailwind CSS 4** — Theme configured inline via `@theme` in `src/app/globals.css`; colors use CSS custom properties (`--background`, `--foreground`) defined in `:root`
-- **Font** — Inter Variable loaded locally via `next/font/local` in `layout.tsx` from `src/fonts/`, exposed as `--font-inter` CSS variable, applied in both `@theme` and `body` in `globals.css`. The `body` `font-family` intentionally duplicates `--font-sans` from `@theme` — some mobile browsers need the explicit declaration.
+- **Fonts** — Geist (sans) and Geist Mono loaded locally via `next/font/local` in `layout.tsx` from `src/fonts/`, exposed as `--font-geist` and `--font-geist-mono` CSS variables, mapped to `--font-sans` and `--font-mono` in `@theme` and `body` in `globals.css`. Both use `display: "block"` to hide text until the font loads. The `body` `font-family` intentionally duplicates `--font-sans` from `@theme` — some mobile browsers need the explicit declaration.
 - **Components** — `src/components/sections/` for page sections, `src/components/common/` for reusable utility components
 - **Static assets** — `public/images/`, `public/videos/`, `public/vectors/`
 - **Custom font files** — `src/fonts/`
@@ -41,6 +41,14 @@ Minimal Next.js starter kit for building landing pages. This is a template repo 
 - **`poweredByHeader: false`** — Next.js framework identification disabled
 - **`security.txt`** — Vulnerability reporting contact at `public/.well-known/security.txt`
 
+## Environment Variables
+
+- **`DEV_ORIGIN`** — Optional. Set in `.env.local` to allow a custom dev origin (e.g., a tunneled URL) via `allowedDevOrigins` in `next.config.ts`
+
+## Editor
+
+VS Code workspace config in `.vscode/`: recommended extensions (ESLint, Prettier, Tailwind CSS IntelliSense) and settings to suppress unknown `@` rule warnings from Tailwind CSS 4 syntax.
+
 ## Dependency Notes
 
 - **`overrides`** — `package.json` includes an `overrides` field to pin `minimatch@^10` for security fixes in transitive ESLint dependencies. Keep this until `eslint-config-next` updates its dependency tree.
@@ -53,7 +61,7 @@ When cloning this kit for a new project, update the following:
 2. **`src/app/layout.tsx`** — Update `metadata.title` from `"marner-next-kit"`; add `description` and Open Graph tags as needed
 3. **`src/app/page.tsx`** — Replace the placeholder landing page content
 4. **`README.md`** — Update title, description, and any project-specific details
-5. **Font** — To swap Inter: replace the font files in `src/fonts/`, update the `src` paths and variable in `layout.tsx`, then update `font-family` references in `globals.css`
+5. **Font** — To swap Geist: replace the font files in `src/fonts/`, update the `src` paths and variables in `layout.tsx`, then update `font-family` references in `globals.css`
 6. **Theming** — Update `--background` and `--foreground` CSS variables in `globals.css`
 7. **Metadata** — Add favicon, og-image, and other assets to `public/`
 8. **Security** — Update `security.txt` contact and expiry; adjust CSP in `next.config.ts` if needed; remove `X-Robots-Tag` header, `robots.txt` disallow, and `robots` metadata when ready to launch

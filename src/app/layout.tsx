@@ -2,12 +2,22 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 
-const inter = localFont({
+const geist = localFont({
   src: [
-    { path: "../fonts/InterVariable.woff2", style: "normal" },
-    { path: "../fonts/InterVariable-Italic.woff2", style: "italic" },
+    { path: "../fonts/Geist[wght].woff2", style: "normal" },
+    { path: "../fonts/Geist-Italic[wght].woff2", style: "italic" },
   ],
-  variable: "--font-inter",
+  display: "block",
+  variable: "--font-geist",
+});
+
+const geistMono = localFont({
+  src: [
+    { path: "../fonts/GeistMono[wght].woff2", style: "normal" },
+    { path: "../fonts/GeistMono-Italic[wght].woff2", style: "italic" },
+  ],
+  display: "block",
+  variable: "--font-geist-mono",
 });
 
 export const metadata: Metadata = {
@@ -29,7 +39,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} antialiased`}>{children}</body>
+      <body className={`${geist.variable} ${geistMono.variable} antialiased`}>
+        {children}
+      </body>
     </html>
   );
 }
