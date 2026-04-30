@@ -21,6 +21,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("http://localhost:3000"),
   title: "marner-next-kit",
   robots: {
     index: false,
@@ -40,7 +41,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geist.variable} ${geistMono.variable} antialiased`}>
-        {children}
+        <main>{children}</main>
       </body>
     </html>
   );

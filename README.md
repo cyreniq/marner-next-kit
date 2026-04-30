@@ -9,10 +9,12 @@ A minimal Next.js starter kit for building landing pages.
 - **TypeScript 5** — Strict mode
 - **Tailwind CSS 4** — Via PostCSS plugin, inline `@theme` configuration
 - **Geist** — Sans and Mono, self-hosted via `next/font/local`
-- **ESLint** — Next.js Core Web Vitals + TypeScript rules (flat config)
+- **ESLint 9** — Next.js Core Web Vitals + TypeScript rules (flat config)
 - **Prettier** — With Tailwind CSS class sorting
 
 ## Getting Started
+
+Requires **Node.js 22+**.
 
 ```bash
 npm install
@@ -43,6 +45,7 @@ src/
     common/             # Reusable utility components
   fonts/                # Custom font files
 public/
+  .well-known/          # security.txt
   images/
   videos/
   vectors/
@@ -52,13 +55,21 @@ public/
 
 `@/*` maps to `src/*` — use `@/components/...` for imports.
 
+## Environment
+
+Copy `.env.example` to `.env.local` and fill in values as needed.
+
+| Variable     | Description                                                                            |
+| ------------ | -------------------------------------------------------------------------------------- |
+| `DEV_ORIGIN` | Optional. Tunneled dev origin (e.g. an ngrok URL) added to Next's `allowedDevOrigins`. |
+
 ## Security
 
 Pre-configured with hardened HTTP security headers (`next.config.ts`), a strict Content Security Policy, `robots.txt`, and a `security.txt` disclosure contact. Indexing is blocked by default (remove before launch).
 
 ## Theming
 
-Colors and fonts are configured via CSS variables in `src/app/globals.css` using Tailwind 4's `@theme inline` directive.
+Colors and fonts are configured via CSS variables in `src/app/globals.css` using Tailwind CSS 4's `@theme inline` directive.
 
 ## Setting Up a New Project
 
